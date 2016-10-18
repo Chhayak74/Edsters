@@ -1,0 +1,9 @@
+
+doctype html
+html
+  body
+    for poster in allposts
+      a(href='http://localhost:3000/post/details?postText=#{poster.postText}&userName=#{poster.userName}')
+         p !{poster.postText}
+  div
+    a(href='http://localhost:3000/users/dashboard') Go to dashboard

@@ -1,0 +1,38 @@
+extends layout
+
+block content
+  h2= title
+   p #{post.fullName}
+    h1
+     p !{post.postText}
+   h3
+    p Created at : #{post.created}
+    p Modified at : #{post.modified}
+    p Tags : #{post.tags}
+    p
+      | 
+      a(href='http://localhost:3000/post/likes?postText=#{post.postText}&userName=#{post.userName}') Likes
+      | : #{post.totalLikes}
+      
+    p
+      | 
+    a(href='http://localhost:3000/post/likeorunlike?id=#{post._id}&button=#{likebutton.value}')
+      input#id1(type='button', value='#{likebutton.value}')
+    
+
+    p Comments: #{post.totalComments}
+    h3 Comment Here...
+    form(name="Comment", method="post", action='http://localhost:3000/post/comment?postText=#{post.postText}&userName=#{post.userName}')
+        div.input
+            span.label Add your comments here 
+            p
+              input(type="text", name="comment")
+        div.actions
+            input(type="submit", value="Comment")
+    p
+    div
+      a(href='http://localhost:3000/post/comments?postText=#{post.postText}&userName=#{post.userName}') Show comments
+
+      div
+       a(href='http://localhost:3000/users/dashboard') Go to dashboard
+

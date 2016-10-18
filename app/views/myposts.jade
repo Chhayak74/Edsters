@@ -1,0 +1,11 @@
+doctype html
+html
+  body
+    for post in allposts
+      a(href='http://localhost:3000/post/details?postText=#{post.postText}&userName=#{post.userName}')
+         p !{post.postText}
+      a(href='http://localhost:3000/post/edit/screen?id=#{post._id}')
+         p  Edit    
+
+div
+  a(href='http://localhost:3000/users/dashboard') Go to dashboard

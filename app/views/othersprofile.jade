@@ -1,0 +1,52 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    h1= title
+  p  #{profile.name}
+  p
+      | 
+    a(href='http://localhost:3000/profile/followunfollow?id=#{profile._id}&button=#{button.value}')
+      input#id1(type='button', value='#{button.value}', onclick='toggle()')
+    script.
+      function toggle() {
+      if(value=="Follow")
+      {document.getElementById("id1").value = "Unfollow";}
+      else{document.getElementById("id1").value = "Follow";}
+      }
+
+
+block content
+  h1= title
+ 
+  p  #{profile.accountType}
+  p  Email id : #{profile.email}
+  p  Mobile Number : #{profile.mobileNumber}
+  p
+   |  Current :  #{profile.jobProfile} 
+   br
+   |             #{profile.currentCompany} 
+   br
+  p
+   | 
+   a(href='http://localhost:3000/profile/followers?id=#{profile._id}') Followers
+   | : #{profile.noOfFollowers}
+  p           
+  p  Skills : #{profile.skills}
+  p  
+   |Past : #{profile.company}
+   |  
+   br
+   |       #{profile.noOfYears}
+   br 
+  p  Education : #{profile.degree}, #{profile.school}
+       
+      div
+       a(href='http://localhost:3000/post/allby?email=#{profile.email}') Posts
+      div
+       a(href='http://localhost:3000/users/dashboard') Go to dashboard
+     
+                 
+        

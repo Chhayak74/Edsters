@@ -1,0 +1,13 @@
+doctype html
+html
+  body
+    p
+      | 
+    a(href='http://localhost:3000/post/like')
+      input#id1(type='button', value='Like', onclick='toggle(this.id, this.value)')
+    script.
+      function toggle(id , value) {
+      if(value=="Like")
+      {document.getElementById("id1").value = "Unlike";}
+      else{document.getElementById("id1").value = "Like";}
+      }

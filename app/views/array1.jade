@@ -1,0 +1,11 @@
+
+doctype html
+html
+  body
+    for follower in array1
+      a(href='http://localhost:3000/profile/others/userName?userName=#{follower.userName}')
+         p !{follower.fullname}
+  div
+    a(href='http://localhost:3000/users/dashboard') Go to dashboard
+
+    

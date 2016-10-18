@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1= title
+  p  Choose your Career Path
+      
+    div
+      a(href='http://localhost:3000/profile/alumni?careerPath=IT') IT
+    div
+      a(href='http://localhost:3000/profile/alumni?careerPath=BussinessDevelopement') Bussiness Developement
+    div
+      a(href='http://localhost:3000/profile/alumni?careerPath=DigitalMarketting') Digital Marketting
+
+    div
+      a(href='http://localhost:3000/users/dashboard') Go to dashboard
+    div
+      a(href='http://localhost:3000/users/logout') logout
+            
+        

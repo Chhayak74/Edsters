@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  h1= title
+  p Hi #{user.firstName}
+  p Your email is #{user.email}
+  p Your mobile number is #{user.mobileNumber}
+  p
+      
+    div
+      a(href='http://localhost:3000/profile/alumni/screen') Find Alumni
+    div
+      a(href='http://localhost:3000/profile/all') Find fellow edSters
+
+
+    div
+      a(href='http://localhost:3000/post/feeds') Feeds
+
+    div
+      a(href='http://localhost:3000/post/create/screen') Create a Post
+
+    div
+      a(href='http://localhost:3000/profile/myprofile') Profile
+    div
+      a(href='http://localhost:3000/users/logout') logout
+            
+        

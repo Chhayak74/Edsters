@@ -1,0 +1,11 @@
+
+doctype html
+html
+  body
+    for profile in likedBy
+      a(href='http://localhost:3000/profile/others/userName?userName=#{profile.userName}')
+         p !{profile.fullname}
+  div
+    a(href='http://localhost:3000/users/dashboard') Go to dashboard
+
+    

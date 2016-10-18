@@ -1,0 +1,11 @@
+
+doctype html
+html
+  body
+    for profile in alumni
+      a(href='http://localhost:3000/profile/others?id=#{profile._id}')
+         p !{profile.name}
+  div
+    a(href='http://localhost:3000/users/dashboard') Go to dashboard
+
+    

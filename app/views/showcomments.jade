@@ -1,0 +1,18 @@
+
+doctype html
+html
+  body
+    for commentobj in comments
+       p
+        | 
+        a(href='http://localhost:3000/profile/others/userName?userName=#{commentobj.userName}') !{commentobj.commentedBy}
+        br
+        | !{commentobj.comment}
+        br
+        
+      
+        
+  div
+    a(href='http://localhost:3000/users/dashboard') Go to dashboard
+
+   
