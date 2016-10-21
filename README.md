@@ -4,7 +4,7 @@ A Social Networking Application
 An application where the alumni of [edWisor.com](https://edwisor.com/) can get in touch with and share their experiences and knowledge.
 
 #### Setup
-`npm install` to install all dependecies
+`npm install` to install all dependencies
 
 Make Sure MongoDB is running.
 
