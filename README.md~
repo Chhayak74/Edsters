@@ -10,8 +10,8 @@ Make Sure MongoDB is running.
 
 Routes - 
 
-Login Screen - /users/login/screen
-Signup Screen - /users/signup/screen
+* Login Screen - /users/login/screen
+* Signup Screen - /users/signup/screen
 
 
 #### Stack
